@@ -1,10 +1,8 @@
 *{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box; /*  yeh hum jitna bhi etra padding bnate h to yeh use border me hi rkhta h */
+    box-sizing: border-box;
 }
-
-/* usually hmko font size body tag me define kr dena chanhiye aur uske hisab se % me use krna chahiye agar kisi element ka font change kr rhe h to */
 
 body{
     font-size: 20px;
@@ -15,11 +13,8 @@ body{
 
 header{
     background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0, 0, 0, 0.7)), url('../images/background.jpg'); /* .. isliye use kiya kyoki hum root folder ke hisab se bta rhe h */
-    /* linear gradient se agar image ke age koi filter lagana h to rgba ke ander value pass ke do as above mentioned last me a means alpha (opacity), opacity btata h */
     background-size: cover;
     background-repeat: no-repeat;
-
-    /* pure screen ke view ko cover krne ke liye use kro */
     height: 100vh; 
 }
 
@@ -28,7 +23,7 @@ header{
     visibility: hidden;
     display: block;
     height: 0px;
-    clear: both; /*Means left aur right fono ko clear kr do*/
+    clear: both; 
 }
 
 .row{
@@ -39,7 +34,7 @@ header{
 .logo{
     height: 120px;
     width: auto;
-    float: left; /* left ki taraf sata dega */
+    float: left;
     margin-top: 20px;
 }
 
@@ -69,10 +64,10 @@ header{
 
 .main-content{
     width: 1180px;
-    position: absolute; /*It is relative to to header so no need to maintion padding or margin just use top, bottom, left, right*/
+    position: absolute; 
     top: 55%;
     left: 50%;
-    transform: translate(-50%, -50%); /*mtlb humne jitna left liya h uska 50% kat do aur uper se bhi kat do. Meams element ko perfectly center me kr do*/
+    transform: translate(-50%, -50%); 
 }
 
 h1{
@@ -131,43 +126,3 @@ h1{
     display: none;
 }
 
-@media only screen and (max-width: 1180px){
-    .main-content{
-        width: 100%;
-        padding: 0 2%;
-    }
-}
-
-@media only screen and (max-width: 1180px){
-    h1{font-size: 200%;}
-}
-
-@media only screen and (max-width: 768px){
-    h1{font-size: 180%;}
-
-    .main-nav{
-        display: none;
-        float: right;
-    }
-
-    .mobile-icon{
-        display: inline-block;
-        color: white;
-        float: right;
-        margin-top: 60px;
-        margin-right: 20px;
-    }
-
-    .main-nav li{
-        display: block;
-        margin-top: 10px;
-    }
-}
-
-@media only screen and (max-width: 480px){
-    .btn-full{
-        margin-bottom: 20px;
-    }
-
-    h1{font-size: 140%;}
-}
