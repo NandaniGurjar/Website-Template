@@ -1,0 +1,173 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*  yeh hum jitna bhi etra padding bnate h to yeh use border me hi rkhta h */
+}
+
+/* usually hmko font size body tag me define kr dena chanhiye aur uske hisab se % me use krna chahiye agar kisi element ka font change kr rhe h to */
+
+body{
+    font-size: 20px;
+    overflow-x: hidden;
+    color: white;
+    font-family: 'Flamenco', cursive;
+}
+
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0, 0, 0, 0.7)), url('../images/background.jpg'); /* .. isliye use kiya kyoki hum root folder ke hisab se bta rhe h */
+    /* linear gradient se agar image ke age koi filter lagana h to rgba ke ander value pass ke do as above mentioned last me a means alpha (opacity), opacity btata h */
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* pure screen ke view ko cover krne ke liye use kro */
+    height: 100vh; 
+}
+
+.clearfix:after{
+    content: '.'; 
+    visibility: hidden;
+    display: block;
+    height: 0px;
+    clear: both; /*Means left aur right fono ko clear kr do*/
+}
+
+.row{
+    max-width: 1180px; 
+    margin: 0 auto;
+}
+
+.logo{
+    height: 120px;
+    width: auto;
+    float: left; /* left ki taraf sata dega */
+    margin-top: 20px;
+}
+
+.main-nav{
+    float: right;
+    margin-top: 60px;
+}
+
+.main-nav li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 30px;
+}
+
+.main-nav li a{
+    padding: 5px 0;;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 80%;
+    font-weight: 100;
+}
+
+.main-nav li a:hover{
+    border-bottom: 2px solid #bf55ec;
+}
+
+.main-content{
+    width: 1180px;
+    position: absolute; /*It is relative to to header so no need to maintion padding or margin just use top, bottom, left, right*/
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*mtlb humne jitna left liya h uska 50% kat do aur uper se bhi kat do. Meams element ko perfectly center me kr do*/
+}
+
+h1{
+    color: white;
+    font-size: 240%;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: lighter;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full{
+    background-color: transparent;
+    color: #bf55ec;
+    margin-right: 15px;
+    border: 1px solid #bf55ec;
+}
+
+.btn-full:hover{
+    background-color: white;
+}
+
+.btn-new{
+    background-color: transparent;
+    color: white;
+    border: 1px solid #fff;
+}
+
+.btn-new:hover{
+    background-color:  #bf55ec;
+}
+
+.color-change{
+    animation: colorchangerishu 1s infinite;
+}
+
+@keyframes colorchangerishu{
+    0%{color: purple;}
+    25%{color: white;}
+    50%{color: purple;}
+    100%{color: pink;}
+}
+
+.mobile-icon{
+    display: none;
+}
+
+@media only screen and (max-width: 1180px){
+    .main-content{
+        width: 100%;
+        padding: 0 2%;
+    }
+}
+
+@media only screen and (max-width: 1180px){
+    h1{font-size: 200%;}
+}
+
+@media only screen and (max-width: 768px){
+    h1{font-size: 180%;}
+
+    .main-nav{
+        display: none;
+        float: right;
+    }
+
+    .mobile-icon{
+        display: inline-block;
+        color: white;
+        float: right;
+        margin-top: 60px;
+        margin-right: 20px;
+    }
+
+    .main-nav li{
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .btn-full{
+        margin-bottom: 20px;
+    }
+
+    h1{font-size: 140%;}
+}
