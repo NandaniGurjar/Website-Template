@@ -126,3 +126,44 @@ h1{
     display: none;
 }
 
+
+@media only screen and (max-width: 1180px){
+    .main-content{
+        width: 100%;
+        padding: 0 2%;
+    }
+}
+
+@media only screen and (max-width: 1180px){
+    h1{font-size: 200%;}
+}
+
+@media only screen and (max-width: 768px){
+    h1{font-size: 180%;}
+
+    .main-nav{
+        display: none;
+        float: right;
+    }
+
+    .mobile-icon{
+        display: inline-block;
+        color: white;
+        float: right;
+        margin-top: 60px;
+        margin-right: 20px;
+    }
+
+    .main-nav li{
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .btn-full{
+        margin-bottom: 20px;
+    }
+
+    h1{font-size: 140%;}
+}
